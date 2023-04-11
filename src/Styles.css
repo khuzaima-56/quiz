@@ -1,0 +1,132 @@
+.app {
+    background-color:rgb(43, 42, 53);
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+.main{
+     background-color: rgb(43, 42, 53);
+     width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding:  2rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 13px 16px 40px black;
+    border: 1px solid rgb(31, 31, 40);
+}
+
+.scoreBox {
+    background-color: rgb(43, 42, 53);
+    /* width: 50vw; */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding:  4rem 4rem;
+    place-items: center;
+    border-radius: 1rem;
+    box-shadow: 13px 16px 40px black;
+    border: 1px solid rgb(31, 31, 40);
+}
+
+.retake {
+    background-color: rgb(43, 42, 53);
+    color: white;
+    min-height: 1.5rem;
+    border-radius: 1rem;
+    padding-block: 0.5rem;
+    margin-block: 2%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    width: 50%; 
+    min-width: 10rem;
+}
+
+.correct {
+    background-color: green;
+}
+
+.qNo {
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.totalLength {
+    font-size: 13px;
+}
+
+.question {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.answerBox {
+    justify-self: center;
+    align-self: center;
+    /* place-self: center; */
+    width: 70%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.answerBox > button {
+    background-color: rgb(43, 42, 53);
+    color: white;
+    min-height: 1.5rem;
+    border-radius: 1rem;
+    padding-block: 0.5rem;
+    margin-block: 2%;
+    border: 2px solid white;
+    text-align: start;
+    padding-left: 1rem;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.answer:hover, .retake:hover {
+  background-color: rgb(23, 23, 28);
+  scale: 1.05;
+}
+
+@media screen and (max-width: 900px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-gap: 1rem;
+    }
+
+    .retake {
+        width: 75%;
+    }
+
+    .answerBox {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        width: 70vw;
+    }
+
+    .scoreBox {
+        padding-inline: 2rem;
+    }
+
+    .retake {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .main {
+        width: 100vw;
+    }
+}
+
+
